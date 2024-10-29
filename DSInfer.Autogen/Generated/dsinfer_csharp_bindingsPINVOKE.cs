@@ -313,10 +313,10 @@ class dsinfer_csharp_bindingsPINVOKE {
   public static extern global::System.IntPtr new_JsonValue__SWIG_4(int jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_new_JsonValue__SWIG_5")]
-  public static extern global::System.IntPtr new_JsonValue__SWIG_5(string jarg1);
+  public static extern global::System.IntPtr new_JsonValue__SWIG_5(long jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_new_JsonValue__SWIG_6")]
-  public static extern global::System.IntPtr new_JsonValue__SWIG_6(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern global::System.IntPtr new_JsonValue__SWIG_6(string jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_new_JsonValue__SWIG_7")]
   public static extern global::System.IntPtr new_JsonValue__SWIG_7(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -324,11 +324,14 @@ class dsinfer_csharp_bindingsPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_new_JsonValue__SWIG_8")]
   public static extern global::System.IntPtr new_JsonValue__SWIG_8(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_new_JsonValue__SWIG_9")]
+  public static extern global::System.IntPtr new_JsonValue__SWIG_9(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_delete_JsonValue")]
   public static extern void delete_JsonValue(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_new_JsonValue__SWIG_9")]
-  public static extern global::System.IntPtr new_JsonValue__SWIG_9(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_new_JsonValue__SWIG_10")]
+  public static extern global::System.IntPtr new_JsonValue__SWIG_10(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_JsonValue_swap")]
   public static extern void JsonValue_swap(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
@@ -374,6 +377,12 @@ class dsinfer_csharp_bindingsPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_JsonValue_toInt__SWIG_1")]
   public static extern int JsonValue_toInt__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_JsonValue_toInt64__SWIG_0")]
+  public static extern long JsonValue_toInt64__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, long jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_JsonValue_toInt64__SWIG_1")]
+  public static extern long JsonValue_toInt64__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_JsonValue_toDouble__SWIG_0")]
   public static extern double JsonValue_toDouble__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
@@ -435,11 +444,14 @@ class dsinfer_csharp_bindingsPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_new_DisplayText__SWIG_2")]
   public static extern global::System.IntPtr new_DisplayText__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_new_DisplayText__SWIG_3")]
+  public static extern global::System.IntPtr new_DisplayText__SWIG_3(string jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_delete_DisplayText")]
   public static extern void delete_DisplayText(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_new_DisplayText__SWIG_3")]
-  public static extern global::System.IntPtr new_DisplayText__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_new_DisplayText__SWIG_4")]
+  public static extern global::System.IntPtr new_DisplayText__SWIG_4(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_DisplayText_text__SWIG_0")]
   public static extern string DisplayText_text__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -729,38 +741,80 @@ class dsinfer_csharp_bindingsPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_ContributeRegistry_env")]
   public static extern global::System.IntPtr ContributeRegistry_env(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_delete_InferenceContext")]
+  public static extern void delete_InferenceContext(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceContext_id")]
+  public static extern long InferenceContext_id(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceContext_insertObject")]
+  public static extern bool InferenceContext_insertObject(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceContext_removeObject")]
+  public static extern bool InferenceContext_removeObject(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceContext_containsObject")]
+  public static extern bool InferenceContext_containsObject(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceContext_getObject")]
+  public static extern global::System.IntPtr InferenceContext_getObject(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceContext_clearObjects")]
+  public static extern void InferenceContext_clearObjects(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceContext_executeCommand")]
+  public static extern bool InferenceContext_executeCommand(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_delete_InferenceTask")]
+  public static extern void delete_InferenceTask(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceTask_initialize")]
+  public static extern bool InferenceTask_initialize(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceTask_start")]
+  public static extern bool InferenceTask_start(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceTask_stop")]
+  public static extern bool InferenceTask_stop(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceTask_id")]
+  public static extern long InferenceTask_id(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceTask_state")]
+  public static extern int InferenceTask_state(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceTask_result")]
+  public static extern global::System.IntPtr InferenceTask_result(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_delete_InferenceSession")]
+  public static extern void delete_InferenceSession(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceSession_open")]
+  public static extern bool InferenceSession_open(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceSession_close")]
+  public static extern bool InferenceSession_close(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceSession_id")]
+  public static extern long InferenceSession_id(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceSession_isRunning")]
+  public static extern bool InferenceSession_isRunning(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_delete_InferenceDriver")]
   public static extern void delete_InferenceDriver(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceDriver_initialize")]
   public static extern bool InferenceDriver_initialize(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceDriver_sessionCreate")]
-  public static extern long InferenceDriver_sessionCreate(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceDriver_createSession")]
+  public static extern global::System.IntPtr InferenceDriver_createSession(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceDriver_sessionDestroy")]
-  public static extern bool InferenceDriver_sessionDestroy(global::System.Runtime.InteropServices.HandleRef jarg1, long jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceDriver_createTask")]
+  public static extern global::System.IntPtr InferenceDriver_createTask(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceDriver_sessionRunning")]
-  public static extern bool InferenceDriver_sessionRunning(global::System.Runtime.InteropServices.HandleRef jarg1, long jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceDriver_taskCreate")]
-  public static extern long InferenceDriver_taskCreate(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceDriver_taskDestroy")]
-  public static extern void InferenceDriver_taskDestroy(global::System.Runtime.InteropServices.HandleRef jarg1, long jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceDriver_taskStart")]
-  public static extern bool InferenceDriver_taskStart(global::System.Runtime.InteropServices.HandleRef jarg1, long jarg2, global::System.Runtime.InteropServices.HandleRef jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
-
-  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceDriver_taskStop")]
-  public static extern bool InferenceDriver_taskStop(global::System.Runtime.InteropServices.HandleRef jarg1, long jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
-
-  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceDriver_taskState")]
-  public static extern int InferenceDriver_taskState(global::System.Runtime.InteropServices.HandleRef jarg1, long jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceDriver_taskResult")]
-  public static extern bool InferenceDriver_taskResult(global::System.Runtime.InteropServices.HandleRef jarg1, long jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_InferenceDriver_createContext")]
+  public static extern global::System.IntPtr InferenceDriver_createContext(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_delete_InferenceSpec")]
   public static extern void delete_InferenceSpec(global::System.Runtime.InteropServices.HandleRef jarg1);
@@ -1763,6 +1817,48 @@ class dsinfer_csharp_bindingsPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_delete_StringList")]
   public static extern void delete_StringList(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_new_StringMap__SWIG_0")]
+  public static extern global::System.IntPtr new_StringMap__SWIG_0();
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_new_StringMap__SWIG_1")]
+  public static extern global::System.IntPtr new_StringMap__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_StringMap_size")]
+  public static extern uint StringMap_size(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_StringMap_empty")]
+  public static extern bool StringMap_empty(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_StringMap_Clear")]
+  public static extern void StringMap_Clear(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_StringMap_getitem")]
+  public static extern string StringMap_getitem(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_StringMap_setitem")]
+  public static extern void StringMap_setitem(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, string jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_StringMap_ContainsKey")]
+  public static extern bool StringMap_ContainsKey(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_StringMap_Add")]
+  public static extern void StringMap_Add(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2, string jarg3);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_StringMap_Remove")]
+  public static extern bool StringMap_Remove(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_StringMap_create_iterator_begin")]
+  public static extern global::System.IntPtr StringMap_create_iterator_begin(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_StringMap_get_next_key")]
+  public static extern string StringMap_get_next_key(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_StringMap_destroy_iterator")]
+  public static extern void StringMap_destroy_iterator(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.IntPtr jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_delete_StringMap")]
+  public static extern void delete_StringMap(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("dsinfer_csharp_bindings", EntryPoint="CSharp_DsInfer_new_PathList__SWIG_0")]
   public static extern global::System.IntPtr new_PathList__SWIG_0();

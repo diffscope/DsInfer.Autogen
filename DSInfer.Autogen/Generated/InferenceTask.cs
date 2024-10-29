@@ -10,20 +10,20 @@
 
 namespace DsInfer {
 
-public class DisplayText : global::System.IDisposable {
+public class InferenceTask : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal DisplayText(global::System.IntPtr cPtr, bool cMemoryOwn) {
+  internal InferenceTask(global::System.IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(DisplayText obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(InferenceTask obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(DisplayText obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(InferenceTask obj) {
     if (obj != null) {
       if (!obj.swigCMemOwn)
         throw new global::System.ApplicationException("Cannot release ownership as memory is not owned");
@@ -36,7 +36,7 @@ public class DisplayText : global::System.IDisposable {
     }
   }
 
-  ~DisplayText() {
+  ~InferenceTask() {
     Dispose(false);
   }
 
@@ -50,46 +50,50 @@ public class DisplayText : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          dsinfer_csharp_bindingsPINVOKE.delete_DisplayText(swigCPtr);
+          dsinfer_csharp_bindingsPINVOKE.delete_InferenceTask(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public DisplayText() : this(dsinfer_csharp_bindingsPINVOKE.new_DisplayText__SWIG_0(), true) {
-  }
-
-  public DisplayText(string text) : this(dsinfer_csharp_bindingsPINVOKE.new_DisplayText__SWIG_1(text), true) {
-    if (dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Pending) throw dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public DisplayText(JsonValue value) : this(dsinfer_csharp_bindingsPINVOKE.new_DisplayText__SWIG_2(JsonValue.getCPtr(value)), true) {
-    if (dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Pending) throw dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public DisplayText(string defaultText, StringMap texts) : this(dsinfer_csharp_bindingsPINVOKE.new_DisplayText__SWIG_3(defaultText, StringMap.getCPtr(texts)), true) {
-    if (dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Pending) throw dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public DisplayText(DisplayText rhs) : this(dsinfer_csharp_bindingsPINVOKE.new_DisplayText__SWIG_4(DisplayText.getCPtr(rhs)), true) {
-    if (dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Pending) throw dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Retrieve();
-  }
-
-  public string text() {
-    string ret = dsinfer_csharp_bindingsPINVOKE.DisplayText_text__SWIG_0(swigCPtr);
-    return ret;
-  }
-
-  public string text(string locale) {
-    string ret = dsinfer_csharp_bindingsPINVOKE.DisplayText_text__SWIG_1(swigCPtr, locale);
+  public virtual bool initialize(JsonValue args, Error error) {
+    bool ret = dsinfer_csharp_bindingsPINVOKE.InferenceTask_initialize(swigCPtr, JsonValue.getCPtr(args), Error.getCPtr(error));
     if (dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Pending) throw dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public bool isEmpty() {
-    bool ret = dsinfer_csharp_bindingsPINVOKE.DisplayText_isEmpty(swigCPtr);
+  public virtual bool start(JsonValue input, Error error) {
+    bool ret = dsinfer_csharp_bindingsPINVOKE.InferenceTask_start(swigCPtr, JsonValue.getCPtr(input), Error.getCPtr(error));
+    if (dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Pending) throw dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Retrieve();
     return ret;
+  }
+
+  public virtual bool stop(Error error) {
+    bool ret = dsinfer_csharp_bindingsPINVOKE.InferenceTask_stop(swigCPtr, Error.getCPtr(error));
+    return ret;
+  }
+
+  public virtual long id() {
+    long ret = dsinfer_csharp_bindingsPINVOKE.InferenceTask_id(swigCPtr);
+    return ret;
+  }
+
+  public virtual InferenceTask.State state() {
+    InferenceTask.State ret = (InferenceTask.State)dsinfer_csharp_bindingsPINVOKE.InferenceTask_state(swigCPtr);
+    return ret;
+  }
+
+  public virtual JsonValue result() {
+    JsonValue ret = new JsonValue(dsinfer_csharp_bindingsPINVOKE.InferenceTask_result(swigCPtr), true);
+    return ret;
+  }
+
+  public enum State {
+    Idle,
+    Running,
+    Failed,
+    Terminated
   }
 
 }

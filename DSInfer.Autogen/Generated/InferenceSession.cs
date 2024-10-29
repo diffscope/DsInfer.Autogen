@@ -10,20 +10,20 @@
 
 namespace DsInfer {
 
-public class InferenceDriver : global::System.IDisposable {
+public class InferenceSession : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal InferenceDriver(global::System.IntPtr cPtr, bool cMemoryOwn) {
+  internal InferenceSession(global::System.IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(InferenceDriver obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(InferenceSession obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(InferenceDriver obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef swigRelease(InferenceSession obj) {
     if (obj != null) {
       if (!obj.swigCMemOwn)
         throw new global::System.ApplicationException("Cannot release ownership as memory is not owned");
@@ -36,7 +36,7 @@ public class InferenceDriver : global::System.IDisposable {
     }
   }
 
-  ~InferenceDriver() {
+  ~InferenceSession() {
     Dispose(false);
   }
 
@@ -50,34 +50,31 @@ public class InferenceDriver : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          dsinfer_csharp_bindingsPINVOKE.delete_InferenceDriver(swigCPtr);
+          dsinfer_csharp_bindingsPINVOKE.delete_InferenceSession(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public virtual bool initialize(JsonValue args, Error error) {
-    bool ret = dsinfer_csharp_bindingsPINVOKE.InferenceDriver_initialize(swigCPtr, JsonValue.getCPtr(args), Error.getCPtr(error));
+  public virtual bool open(string path, JsonObject args, Error error) {
+    bool ret = dsinfer_csharp_bindingsPINVOKE.InferenceSession_open(swigCPtr, path, JsonObject.getCPtr(args), Error.getCPtr(error));
     if (dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Pending) throw dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Retrieve();
     return ret;
   }
 
-  public virtual InferenceSession createSession() {
-    global::System.IntPtr cPtr = dsinfer_csharp_bindingsPINVOKE.InferenceDriver_createSession(swigCPtr);
-    InferenceSession ret = (cPtr == global::System.IntPtr.Zero) ? null : new InferenceSession(cPtr, false);
+  public virtual bool close(Error error) {
+    bool ret = dsinfer_csharp_bindingsPINVOKE.InferenceSession_close(swigCPtr, Error.getCPtr(error));
     return ret;
   }
 
-  public virtual InferenceTask createTask() {
-    global::System.IntPtr cPtr = dsinfer_csharp_bindingsPINVOKE.InferenceDriver_createTask(swigCPtr);
-    InferenceTask ret = (cPtr == global::System.IntPtr.Zero) ? null : new InferenceTask(cPtr, false);
+  public virtual long id() {
+    long ret = dsinfer_csharp_bindingsPINVOKE.InferenceSession_id(swigCPtr);
     return ret;
   }
 
-  public virtual InferenceContext createContext() {
-    global::System.IntPtr cPtr = dsinfer_csharp_bindingsPINVOKE.InferenceDriver_createContext(swigCPtr);
-    InferenceContext ret = (cPtr == global::System.IntPtr.Zero) ? null : new InferenceContext(cPtr, false);
+  public virtual bool isRunning() {
+    bool ret = dsinfer_csharp_bindingsPINVOKE.InferenceSession_isRunning(swigCPtr);
     return ret;
   }
 

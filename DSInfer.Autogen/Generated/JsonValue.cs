@@ -72,23 +72,26 @@ public class JsonValue : global::System.IDisposable {
   public JsonValue(int n) : this(dsinfer_csharp_bindingsPINVOKE.new_JsonValue__SWIG_4(n), true) {
   }
 
-  public JsonValue(string s) : this(dsinfer_csharp_bindingsPINVOKE.new_JsonValue__SWIG_5(s), true) {
+  public JsonValue(long n) : this(dsinfer_csharp_bindingsPINVOKE.new_JsonValue__SWIG_5(n), true) {
+  }
+
+  public JsonValue(string s) : this(dsinfer_csharp_bindingsPINVOKE.new_JsonValue__SWIG_6(s), true) {
     if (dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Pending) throw dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public JsonValue(ByteArray bytes) : this(dsinfer_csharp_bindingsPINVOKE.new_JsonValue__SWIG_6(ByteArray.getCPtr(bytes)), true) {
+  public JsonValue(ByteArray bytes) : this(dsinfer_csharp_bindingsPINVOKE.new_JsonValue__SWIG_7(ByteArray.getCPtr(bytes)), true) {
     if (dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Pending) throw dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public JsonValue(JsonArray a) : this(dsinfer_csharp_bindingsPINVOKE.new_JsonValue__SWIG_7(JsonArray.getCPtr(a)), true) {
+  public JsonValue(JsonArray a) : this(dsinfer_csharp_bindingsPINVOKE.new_JsonValue__SWIG_8(JsonArray.getCPtr(a)), true) {
     if (dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Pending) throw dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public JsonValue(JsonObject o) : this(dsinfer_csharp_bindingsPINVOKE.new_JsonValue__SWIG_8(JsonObject.getCPtr(o)), true) {
+  public JsonValue(JsonObject o) : this(dsinfer_csharp_bindingsPINVOKE.new_JsonValue__SWIG_9(JsonObject.getCPtr(o)), true) {
     if (dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Pending) throw dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Retrieve();
   }
 
-  public JsonValue(JsonValue other) : this(dsinfer_csharp_bindingsPINVOKE.new_JsonValue__SWIG_9(JsonValue.getCPtr(other)), true) {
+  public JsonValue(JsonValue other) : this(dsinfer_csharp_bindingsPINVOKE.new_JsonValue__SWIG_10(JsonValue.getCPtr(other)), true) {
     if (dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Pending) throw dsinfer_csharp_bindingsPINVOKE.SWIGPendingException.Retrieve();
   }
 
@@ -164,6 +167,16 @@ public class JsonValue : global::System.IDisposable {
 
   public int toInt() {
     int ret = dsinfer_csharp_bindingsPINVOKE.JsonValue_toInt__SWIG_1(swigCPtr);
+    return ret;
+  }
+
+  public long toInt64(long defaultValue) {
+    long ret = dsinfer_csharp_bindingsPINVOKE.JsonValue_toInt64__SWIG_0(swigCPtr, defaultValue);
+    return ret;
+  }
+
+  public long toInt64() {
+    long ret = dsinfer_csharp_bindingsPINVOKE.JsonValue_toInt64__SWIG_1(swigCPtr);
     return ret;
   }
 
